@@ -1,0 +1,49 @@
+{
+  "name": "captnstarburst.github.io",
+  "version": "3.0.0",
+  "description": "Conor Hinchee Home Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "browser-sync start --server \"dist\" --files \"dist\"",
+    "build:tailwind": "npx tailwindcss -i ./src/css/main.css -o ./dist/main.css",
+    "watch:tailwind": "npx tailwindcss -i ./src/css/main.css -o ./dist/main.css --watch",
+    "build:images": "imagemin src/images/**/* --out-dir=dist/images",
+    "watch:images": "onchange \"src/images\" -- npm run build:images",
+    "build:js": "webpack --mode=production",
+    "watch:js": "onchange \"src/js\" -- webpack --mode=development",
+    "build:html": "posthtml -c posthtml.json",
+    "watch:html": "onchange \"src/components\" -- npm run build:html",
+    "start": "run-p serve watch:*",
+    "build": "run-s build:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Conor-Hinchee/captnstarburst.github.io.git"
+  },
+  "author": "Conor Hinchee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Conor-Hinchee/captnstarburst.github.io/issues"
+  },
+  "homepage": "https://github.com/Conor-Hinchee/captnstarburst.github.io#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.9",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.3",
+    "browser-sync": "^2.29.3",
+    "eslint": "^8.45.0",
+    "eslint-webpack-plugin": "^4.0.1",
+    "htmlnano": "^2.0.4",
+    "imagemin-cli": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss": "^8.4.27",
+    "posthtml": "^0.16.6",
+    "posthtml-cli": "^0.10.0",
+    "posthtml-modules": "^0.9.1",
+    "tailwindcss": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}

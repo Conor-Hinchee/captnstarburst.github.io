@@ -1,0 +1,11 @@
+{
+    "input": "./src/index.html",
+    "output": "dist",
+    "plugins": {
+        "posthtml-modules": {
+            "root": "./src",
+            "initial": true
+        },
+        "htmlnano": {}
+    }
+}
