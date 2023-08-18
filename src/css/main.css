@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (min-width: 552px) {
+    .unset-edit-button {
+        all: unset;
+    }
+}

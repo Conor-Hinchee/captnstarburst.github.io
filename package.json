@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/Conor-Hinchee/captnstarburst.github.io#readme",
   "devDependencies": {
+    "@axe-core/playwright": "^4.7.3",
     "@babel/preset-env": "^7.22.9",
     "@playwright/test": "^1.36.2",
     "autoprefixer": "^10.4.14",
