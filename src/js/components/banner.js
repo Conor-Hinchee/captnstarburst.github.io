@@ -11,11 +11,10 @@ const getDeviceType = (screenWidth) => {
     }
 };
 
-const setTheme = (event) => {
-    console.log(event.target.dataset.setTheme);
-    const setTheme = event.target.dataset.setTheme;
+const changeTheme = (event = {}, override = '' ) => {
+    const { setTheme } = event?.target?.dataset || '';
 
-    if(setTheme === 'dark'){
+    if(override === 'dark' || setTheme === 'dark'){
         document.documentElement.classList.add('dark');
         localStorage.setItem('theme', 'dark');
 
@@ -30,7 +29,7 @@ const setTheme = (event) => {
         darkModeItem.classList.toggle('flex');
     }
 
-    if(setTheme === 'light'){
+    if(override === 'light' || setTheme === 'light'){
         document.documentElement.classList.remove('dark');
         localStorage.setItem('theme', 'light');
 
@@ -108,14 +107,16 @@ const setClickListeners = () => {
 
     const darkModeItem = document.querySelector('#darkModeItem');
     const darkModeButton = darkModeItem.firstElementChild;
-    darkModeButton.addEventListener('click', setTheme);
+    darkModeButton.addEventListener('click', changeTheme);
     
     const lightModeItem = document.querySelector('#lightModeItem');
     const lightModeButton = lightModeItem.firstElementChild;
-    lightModeButton.addEventListener('click', setTheme);
+    lightModeButton.addEventListener('click', changeTheme);
 };
 
 const initBanner = () => {
+    const currentTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+    changeTheme(null, currentTheme);
     // initial screen width
     const screenWidth = window.innerWidth;
 

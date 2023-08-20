@@ -546,6 +546,10 @@ video {
   border-width: 0;
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -712,10 +716,6 @@ video {
 
 :is(.dark .dark\:fill-white) {
   fill: #fff;
-}
-
-:is(.dark .dark\:stroke-white) {
-  stroke: #fff;
 }
 
 :is(.dark .dark\:text-gray-200) {
