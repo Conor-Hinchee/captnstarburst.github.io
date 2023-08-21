@@ -115,7 +115,7 @@ const setClickListeners = () => {
 };
 
 const initBanner = () => {
-    const currentTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+    const currentTheme = localStorage.getItem('theme');
     changeTheme(null, currentTheme);
     // initial screen width
     const screenWidth = window.innerWidth;
