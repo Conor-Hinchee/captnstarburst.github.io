@@ -15,21 +15,25 @@ const changeTheme = (event = {}, override = '' ) => {
     const { setTheme } = event?.target?.dataset || '';
 
     if(override === 'dark' || setTheme === 'dark'){
+        console.log('setting dark theme');
         document.documentElement.classList.add('dark');
         localStorage.setItem('theme', 'dark');
 
         // set the theme to dark, reverse the icon to light
         const lightModeItem = document.querySelector('#lightModeItem');
-
         const darkModeItem = document.querySelector('#darkModeItem');
 
-        lightModeItem.classList.toggle('hidden');
-        lightModeItem.classList.toggle('flex');
-        darkModeItem.classList.toggle('hidden');
-        darkModeItem.classList.toggle('flex');
+        if(lightModeItem.classList.contains('hidden')){
+            lightModeItem.classList.toggle('hidden');
+            lightModeItem.classList.toggle('flex');
+            darkModeItem.classList.toggle('hidden');
+            darkModeItem.classList.toggle('flex');
+
+        }
     }
 
     if(override === 'light' || setTheme === 'light'){
+        console.log('setting light theme');
         document.documentElement.classList.remove('dark');
         localStorage.setItem('theme', 'light');
 
@@ -38,10 +42,12 @@ const changeTheme = (event = {}, override = '' ) => {
 
         const darkModeItem = document.querySelector('#darkModeItem');
 
-        lightModeItem.classList.toggle('hidden');
-        lightModeItem.classList.toggle('flex');
-        darkModeItem.classList.toggle('hidden');
-        darkModeItem.classList.toggle('flex');
+        if(darkModeItem.classList.contains('hidden')){
+            lightModeItem.classList.toggle('hidden');
+            lightModeItem.classList.toggle('flex');
+            darkModeItem.classList.toggle('hidden');
+            darkModeItem.classList.toggle('flex');
+        }
     }
 
 };
