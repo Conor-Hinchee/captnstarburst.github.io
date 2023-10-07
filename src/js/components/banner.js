@@ -22,6 +22,9 @@ const changeTheme = (event = {}, override = '' ) => {
         // set the theme to dark, reverse the icon to light
         const lightModeItem = document.querySelector('#lightModeItem');
         const darkModeItem = document.querySelector('#darkModeItem');
+        const mainElement =  document.querySelector('main');
+
+        mainElement.classList.replace('bgGridWhite', 'bgGridDark');
 
         if(lightModeItem.classList.contains('hidden')){
             lightModeItem.classList.toggle('hidden');
@@ -39,8 +42,10 @@ const changeTheme = (event = {}, override = '' ) => {
 
         // set the theme to light, reverse the icon to dark
         const lightModeItem = document.querySelector('#lightModeItem');
-
         const darkModeItem = document.querySelector('#darkModeItem');
+
+        const mainElement =  document.querySelector('main');
+        mainElement.classList.replace('bgGridDark', 'bgGridWhite');
 
         if(darkModeItem.classList.contains('hidden')){
             lightModeItem.classList.toggle('hidden');
@@ -129,8 +134,8 @@ const initBanner = () => {
     const deviceType = getDeviceType(screenWidth);
     setLayoutIconAriaPressed(deviceType);
 
-    resizeListener();
     setClickListeners();
+    resizeListener();
 };
 
 

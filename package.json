@@ -7,8 +7,6 @@
     "serve": "browser-sync start --server \"dist\" --files \"dist\"",
     "build:tailwind": "npx tailwindcss -i ./src/css/main.css -o ./dist/main.css",
     "watch:tailwind": "npx tailwindcss -i ./src/css/main.css -o ./dist/main.css -w",
-    "build:images": "imagemin src/images/**/* --out-dir=dist/images",
-    "watch:images": "onchange \"src/images\" -- npm run build:images",
     "build:js": "webpack --mode=production",
     "watch:js": "onchange \"src/js\" -- webpack --mode=development",
     "build:html": "posthtml -c posthtml.json",
