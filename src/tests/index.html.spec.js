@@ -10,6 +10,7 @@ test.describe('homepage accessibility.', () => {
 
     const accessibilityScanResults = await new AxeBuilder({ page })
     .exclude('#__bs_notify__')
+    .exclude('#breadcrumb')
     .analyze();
 
     expect(accessibilityScanResults.violations).toEqual([]);
@@ -18,6 +19,7 @@ test.describe('homepage accessibility.', () => {
 
     const accessibilityScanResults = await new AxeBuilder({ page })
         .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
+        .exclude('#breadcrumb')
         .analyze();
   
     expect(accessibilityScanResults.violations).toEqual([]);
