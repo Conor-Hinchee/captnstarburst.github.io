@@ -15,7 +15,6 @@ const changeTheme = (event = {}, override = '' ) => {
     const { setTheme } = event?.target?.dataset || '';
 
     if(override === 'dark' || setTheme === 'dark'){
-        console.log('setting dark theme');
         document.documentElement.classList.add('dark');
         localStorage.setItem('theme', 'dark');
 
@@ -23,6 +22,7 @@ const changeTheme = (event = {}, override = '' ) => {
         const lightModeItem = document.querySelector('#lightModeItem');
         const darkModeItem = document.querySelector('#darkModeItem');
         const mainElement =  document.querySelector('main');
+        const allOandI = document.querySelectorAll('.OandI');
 
         mainElement.classList.replace('bgGridWhite', 'bgGridDark');
 
@@ -33,18 +33,24 @@ const changeTheme = (event = {}, override = '' ) => {
             darkModeItem.classList.toggle('flex');
 
         }
+
+        if(allOandI.length){
+            allOandI.forEach(oAndI => {
+                oAndI.classList.replace('OandIAnimationLightMode', 'OandIAnimationDarkMode');
+            });
+        }
     }
 
     if(override === 'light' || setTheme === 'light'){
-        console.log('setting light theme');
         document.documentElement.classList.remove('dark');
         localStorage.setItem('theme', 'light');
 
         // set the theme to light, reverse the icon to dark
         const lightModeItem = document.querySelector('#lightModeItem');
         const darkModeItem = document.querySelector('#darkModeItem');
-
         const mainElement =  document.querySelector('main');
+        const allOandI = document.querySelectorAll('.OandI');
+
         mainElement.classList.replace('bgGridDark', 'bgGridWhite');
 
         if(darkModeItem.classList.contains('hidden')){
@@ -52,6 +58,12 @@ const changeTheme = (event = {}, override = '' ) => {
             lightModeItem.classList.toggle('flex');
             darkModeItem.classList.toggle('hidden');
             darkModeItem.classList.toggle('flex');
+        }
+
+        if(allOandI.length){
+            allOandI.forEach(oAndI => {
+                oAndI.classList.replace('OandIAnimationDarkMode', 'OandIAnimationLightMode');
+            });
         }
     }
 

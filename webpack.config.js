@@ -10,7 +10,7 @@ module.exports = {
     plugins: [new ESLintPlugin()],
     output: {
         filename: '[name].bundle.js',
-         path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'dist'),
     },
     module: {
         rules: [{
@@ -22,6 +22,11 @@ module.exports = {
                     presets: ['@babel/preset-env']
                 }
             }
-        }]
-    }
+        },
+        {
+            test: /\.(svg)$/i,
+            type: 'asset',
+        },
+        ]
+    },
 };
