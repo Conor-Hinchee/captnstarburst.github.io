@@ -161,14 +161,13 @@ const drawBoard = () => {
         const div = document.createElement('div');
         div.style.width = `${Cell_Width}px`;
         div.style.height = `${Cell_Height}px`;
-        div.style.backgroundColor = 'blue';
+        div.style.backgroundColor = 'white';
         div.style.border = '1px solid black';
         div.style.flexGrow = '0';
         div.style.flexShrink = '0';
 
         const cellClass = cell.alive ? 'worm' : 'skull';
         div.classList.add(cellClass);
-        // div.innerText = index;
 
         cell.domItem = div;
         cell.neighbors = [...initNeighbors(index, rows, columns)];
@@ -215,7 +214,7 @@ const play = () => {
     Game_Board.forEach((cell, i) => {
             const {alive, age, neighbors} = cell;
 
-            const aliveNeighbors = totalAliveNeighbors(neighbors, i);
+            const aliveNeighbors = totalAliveNeighbors(neighbors);
             
             if (alive && aliveNeighbors <= 1 ) {
                 gameBoardCopy[i].alive = false;
