@@ -35,3 +35,4 @@ const initTheme = () => {
 
 // LIGHT/DARK MODE ARE HERE TO PREVENT FOUC
 initTheme();
+

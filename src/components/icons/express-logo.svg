@@ -1,6 +1,6 @@
-<svg width="164px" height="27px" viewBox="0 0 164 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink
-    <g id="Option-1-MVP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="0.1_home" transform="translate(-44.000000, -64.000000)" fill="#1A1918">
+<svg width="164px" height="27px" viewBox="0 0 164 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Option-1-MVP"  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0.1_home"  class="dark:fill-white" transform="translate(-44.000000, -64.000000)" fill="#1A1918">
             <g id="Express_logo" transform="translate(44.000000, 64.000000)">
                 <polyline id="Fill-1" points="0 25.8271658 0 1.01856647 18.2487273 1.01856647 18.2487273 5.82588525 6.19555556 5.82588525 6.19555556 10.3576358 17.4415657 10.3576358 17.4415657 15.1620539 6.19555556 15.1620539 6.19555556 21.0128024 19.2853232 21.0128024 19.2853232 25.8271658 0 25.8271658"></polyline>
                 <polyline id="Fill-2" points="30.6079495 12.4780608 22.4249293 1.01856647 29.9440808 1.01856647 34.472303 8.57783801 38.9611818 1.01856647 46.3759697 1.01856647 38.2260808 12.4780608 47.7372525 25.8271658 40.1468687 25.8271658 34.4333737 16.5568849 28.5558788 25.8271658 21.0640606 25.8271658 30.6079495 12.4780608"></polyline>
@@ -13,4 +13,3 @@
         </g>
     </g>
 </svg>
-
