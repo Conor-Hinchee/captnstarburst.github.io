@@ -1,1 +1,8 @@
-<svg viewBox="0 0 780 250" class=" w-1/3 m-auto"  aria-hidden="true"><path fill="#231F20" class="dark:fill-white" d="M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z"></path></svg>
+<!-- <svg viewBox="0 0 780 250" class=" w-1/3 m-auto"  aria-hidden="true"><path fill="#231F20" class="dark:fill-white" d="M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z"></path></svg> -->
+
+
+<svg aria-hidden="true"  class="pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+  <path class="pointer-events-none dark:fill-white" d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z"/>
+</svg>
+
